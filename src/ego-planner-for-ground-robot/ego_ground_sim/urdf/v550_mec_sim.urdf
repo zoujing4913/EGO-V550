@@ -1,0 +1,322 @@
+<?xml version="1.0"?>
+<!-- Derived from WheelTec V550_mec_robot.urdf, preserving vendor visuals/inertias/joint locations.
+     Meshes are bundled in meshes/v550_mec. Simplified collisions + ideal Gazebo planar motion
+     are for planner verification; this is not a roller-contact or wheel-slip dynamics model.
+     base_footprint offset comes from the vendor V550_mec robot_model.yaml.
+-->
+<robot name="v550_mec">
+  <link name="base_footprint" />
+  <joint name="base_footprint_joint" type="fixed">
+    <parent link="base_footprint" />
+    <child link="base_link" />
+    <origin xyz="0 0 0.01974" rpy="0 0 0" />
+  </joint>
+  <link name="base_link">
+    <inertial>
+      <origin xyz="-0.00658271210809724 0.000569960640804681 0.0414948422314003" rpy="0 0 0" />
+      <mass value="0.486844981490714" />
+      <inertia ixx="0.000728879704405369" ixy="-1.95581978182495E-06" ixz="1.38866314723912E-05" iyy="0.00137349892998219" iyz="1.27363604508813E-06" izz="0.00198018890840461" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://ego_ground_sim/meshes/v550_mec/base_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.349019607843137 0.349019607843137 0.349019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.003 0 0.0375" />
+      <geometry>
+        <box size="0.26 0.156 0.075" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="lf_wheel_link">
+    <inertial>
+      <origin xyz="-7.70853984810582E-10 -0.00391716682736307 -1.4561503738908E-10" rpy="0 0 0" />
+      <mass value="0.0575555911293518" />
+      <inertia ixx="2.10755821421772E-05" ixy="-2.16920667058315E-13" ixz="-1.66749355467763E-13" iyy="3.40216676430615E-05" iyz="-3.16177321306463E-14" izz="2.10755819831363E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://ego_ground_sim/meshes/v550_mec/lf_wheel_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.376470588235294 0.376470588235294 0.376470588235294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.008 0" rpy="1.57079632679 0 0" />
+      <geometry>
+        <cylinder radius="0.0372" length="0.035" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="lf_wheel_joint" type="continuous">
+    <origin xyz="0.0759419119540792 0.0983014469516561 0.0167" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="lf_wheel_link" />
+    <axis xyz="0 -1 0" />
+    <limit effort="5" velocity="40" />
+    <dynamics damping="0.001" friction="0" />
+  </joint>
+  <link name="lb_wheel_link">
+    <inertial>
+      <origin xyz="8.27298508865315E-09 -0.00391801534011008 2.33900100711504E-08" rpy="0 0 0" />
+      <mass value="0.0575546594328681" />
+      <inertia ixx="2.10751269181675E-05" ixy="-1.20264905096543E-12" ixz="-7.94357439958831E-12" iyy="3.40209427021929E-05" iyz="5.32083294576981E-12" izz="2.10751450994036E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://ego_ground_sim/meshes/v550_mec/lb_wheel_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.376470588235294 0.376470588235294 0.376470588235294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.008 0" rpy="1.57079632679 0 0" />
+      <geometry>
+        <cylinder radius="0.0372" length="0.035" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="lb_wheel_joint" type="continuous">
+    <origin xyz="-0.0816580880459208 0.0983054469516561 0.0167" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="lb_wheel_link" />
+    <axis xyz="0 1 0" />
+    <limit effort="5" velocity="40" />
+    <dynamics damping="0.001" friction="0" />
+  </joint>
+  <link name="rb_wheel_link">
+    <inertial>
+      <origin xyz="7.24978507782303E-10 0.00391716682736308 2.99709913137436E-10" rpy="0 0 0" />
+      <mass value="0.0575555911293519" />
+      <inertia ixx="2.10755819418964E-05" ixy="-1.98892413173438E-13" ixz="1.39806284049536E-13" iyy="3.40216676430614E-05" iyz="-9.21741113361527E-14" izz="2.10755821834171E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://ego_ground_sim/meshes/v550_mec/rb_wheel_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.376470588235294 0.376470588235294 0.376470588235294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0.008 0" rpy="1.57079632679 0 0" />
+      <geometry>
+        <cylinder radius="0.0372" length="0.035" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="rb_wheel_joint" type="continuous">
+    <origin xyz="-0.0816580880459208 -0.0982745530483439 0.0167" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="rb_wheel_link" />
+    <axis xyz="0 1 0" />
+    <limit effort="5" velocity="40" />
+    <dynamics damping="0.001" friction="0" />
+  </joint>
+  <link name="rf_wheel_link">
+    <inertial>
+      <origin xyz="-2.03118767638788E-08 0.00391801536357496 1.47898364041832E-08" rpy="0 0 0" />
+      <mass value="0.0575546595056713" />
+      <inertia ixx="2.10751249334216E-05" ixy="1.27911217452893E-12" ixz="-5.19497190132298E-12" iyy="3.40209423643432E-05" iyz="-5.39837364479759E-12" izz="2.1075146790306E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://ego_ground_sim/meshes/v550_mec/rf_wheel_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.376470588235294 0.376470588235294 0.376470588235294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0.008 0" rpy="1.57079632679 0 0" />
+      <geometry>
+        <cylinder radius="0.0372" length="0.035" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="rf_wheel_joint" type="continuous">
+    <origin xyz="0.0759419119540792 -0.0982785530483439 0.0167" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="rf_wheel_link" />
+    <axis xyz="0 -1 0" />
+    <limit effort="5" velocity="40" />
+    <dynamics damping="0.001" friction="0" />
+  </joint>
+  <link name="camera_link">
+    <inertial>
+      <origin xyz="-4.45004837215657E-08 -3.25846249904076E-07 -0.0139995077279642" rpy="0 0 0" />
+      <mass value="0.0285970249307156" />
+      <inertia ixx="2.49063659552752E-05" ixy="1.41446622396731E-09" ixz="-3.44746104888009E-07" iyy="8.10339394659798E-06" iyz="8.7411817335606E-09" izz="1.91138588188251E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://ego_ground_sim/meshes/v550_mec/camera_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="camera_joint" type="fixed">
+    <origin xyz="0.00160091195407919 -0.00010055304834393 0.152137" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="camera_link" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="laser_link">
+    <inertial>
+      <origin xyz="0.000735465990626988 2.79287293896135E-07 -0.00549379656778799" rpy="0 0 0" />
+      <mass value="0.000111381912632097" />
+      <inertia ixx="8.09810255937586E-10" ixy="2.48436925682356E-14" ixz="-2.38955091202816E-14" iyy="8.09668177063905E-10" iyz="-2.28917457095815E-15" izz="1.17057115150887E-10" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://ego_ground_sim/meshes/v550_mec/laser.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.376470588235294 0.376470588235294 0.376470588235294 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="laser_joint" type="fixed">
+    <origin xyz="0.0834767944381037 1.32296970929568E-05 0.09655" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="laser_link" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="controller_link">
+    <inertial>
+      <origin xyz="-0.0254318317483443 0.0178325189887231 0.0120915107345509" rpy="0 0 0" />
+      <mass value="0.0371650711916722" />
+      <inertia ixx="2.75273128086897E-05" ixy="-4.90416948087793E-07" ixz="-8.95619686706703E-08" iyy="1.08853888864562E-05" iyz="3.79055088929114E-07" izz="3.7257082402319E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://ego_ground_sim/meshes/v550_mec/controller_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="controller_joint" type="fixed">
+    <origin xyz="-0.0539080491826598 -0.011432266551253 0.1135" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="controller_link" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <!-- planar_move commands chassis velocity; these wheel joints have no drive
+       controller. Zero tangential friction makes this an ideal planar model
+       instead of letting passive wheel contacts brake low-speed turns. Normal
+       contact and obstacle collision geometry remain enabled. -->
+  <gazebo reference="lf_wheel_link">
+    <mu1>0.0</mu1>
+    <mu2>0.0</mu2>
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="lb_wheel_link">
+    <mu1>0.0</mu1>
+    <mu2>0.0</mu2>
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="rb_wheel_link">
+    <mu1>0.0</mu1>
+    <mu2>0.0</mu2>
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="rf_wheel_link">
+    <mu1>0.0</mu1>
+    <mu2>0.0</mu2>
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="base_link">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="camera_link">
+    <material>Gazebo/White</material>
+  </gazebo>
+  <gazebo reference="controller_link">
+    <material>Gazebo/White</material>
+  </gazebo>
+  <gazebo reference="laser_link">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="laser_link">
+    <sensor type="ray" name="v550_lidar_2d">
+      <always_on>true</always_on>
+      <visualize>false</visualize>
+      <update_rate>10</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>720</samples>
+            <resolution>1</resolution>
+            <min_angle>-3.14159265359</min_angle>
+            <max_angle>3.14159265359</max_angle>
+          </horizontal>
+          <vertical>
+            <samples>1</samples>
+            <min_angle>0</min_angle>
+            <max_angle>0</max_angle>
+          </vertical>
+        </scan>
+        <range>
+          <min>0.15</min>
+          <max>12</max>
+          <resolution>0.01</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0</mean>
+          <stddev>0.003</stddev>
+        </noise>
+      </ray>
+      <plugin name="v550_lidar" filename="libgazebo_ros_ray_sensor.so">
+        <ros>
+          <remapping>~/out:=/scan</remapping>
+        </ros>
+        <output_type>sensor_msgs/LaserScan</output_type>
+        <frame_name>laser_link</frame_name>
+      </plugin>
+    </sensor>
+  </gazebo>
+  <gazebo>
+    <plugin name="v550_planar_motion" filename="libgazebo_ros_planar_move.so">
+      <ros>
+        <namespace>/v550_sim</namespace>
+        <remapping>cmd_vel:=/v550_sim/cmd_vel</remapping>
+        <remapping>odom:=/odom_combined</remapping>
+      </ros>
+      <update_rate>100</update_rate>
+      <publish_rate>50</publish_rate>
+      <publish_odom>true</publish_odom>
+      <publish_odom_tf>true</publish_odom_tf>
+      <odometry_frame>odom_combined</odometry_frame>
+      <robot_base_frame>base_footprint</robot_base_frame>
+    </plugin>
+    <plugin name="v550_joint_states" filename="libgazebo_ros_joint_state_publisher.so">
+      <ros>
+        <remapping>joint_states:=/joint_states</remapping>
+      </ros>
+      <update_rate>30</update_rate>
+      <joint_name>lf_wheel_joint</joint_name>
+      <joint_name>lb_wheel_joint</joint_name>
+      <joint_name>rf_wheel_joint</joint_name>
+      <joint_name>rb_wheel_joint</joint_name>
+    </plugin>
+  </gazebo>
+</robot>

@@ -1,0 +1,3 @@
+# This directory still contains the original ROS 1 (catkin / Gazebo classic) simulation
+# environment and is therefore excluded from the ROS 2 (colcon) build.
+# Remove this file once the simulation environment has been ported to ROS 2 as well.

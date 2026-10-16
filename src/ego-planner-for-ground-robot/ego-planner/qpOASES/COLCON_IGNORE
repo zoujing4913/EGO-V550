@@ -1,0 +1,2 @@
+# qpOASES is a plain CMake project (no ROS package). It is built as part of
+# mpc_controller via add_subdirectory, so colcon must not treat it as a package.

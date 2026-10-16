@@ -1,0 +1,735 @@
+{
+  "source_tree": "JP6.2_wheeltec_ros2_src_20260903",
+  "note": "SHA-256 hashes before local integration patches; original source remains unchanged.",
+  "packages": {
+    "turn_on_wheeltec_robot": "turn_on_wheeltec_robot",
+    "wheeltec_robot_msg": "wheeltec_robot_msg",
+    "serial": "depend/serial_ros2",
+    "lslidar_driver": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver",
+    "lslidar_msgs": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_msgs",
+    "wheeltec_robot_urdf": "wheeltec_robot_urdf/wheeltec_robot_urdf",
+    "wheeltec_slam_toolbox": "wheeltec_robot_slam/wheeltec_slam_toolbox"
+  },
+  "files": [
+    {
+      "path": "lslidar_driver/CMakeLists.txt",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/CMakeLists.txt",
+      "sha256": "567b253d02a9896597fe4f5f3c3b9915982d1500af978ca02d3010350bcc8f01"
+    },
+    {
+      "path": "lslidar_driver/README.md",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/README.md",
+      "sha256": "32483bbdcfaca6d87ae4970db68f2e373beeb05d59d7b80b30163eb634ff4e24"
+    },
+    {
+      "path": "lslidar_driver/README_EN.md",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/README_EN.md",
+      "sha256": "052eeb9b8dfbc8228b362579c2adcbe8ea2b114ed3e74da8b13097da9fa8f660"
+    },
+    {
+      "path": "lslidar_driver/config/filter_angle.yaml",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/config/filter_angle.yaml",
+      "sha256": "bcef7a020da12e42f70a473abbb54d06cb392cc716e1a4003564fb7496210793"
+    },
+    {
+      "path": "lslidar_driver/config/lslidar_ch.yaml",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/config/lslidar_ch.yaml",
+      "sha256": "288563676455013c944a9e02d05729eb1ac076abc8b9bbe3ee0779091bfce237"
+    },
+    {
+      "path": "lslidar_driver/config/lslidar_cx.yaml",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/config/lslidar_cx.yaml",
+      "sha256": "d0453fbd2243ce9c5c92828f2e716e567d415410cda2667d37911678bc7d33e2"
+    },
+    {
+      "path": "lslidar_driver/config/lslidar_cx_left.yaml",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/config/lslidar_cx_left.yaml",
+      "sha256": "b13c1dae563b2462f00ed317521e584c88df9e13b04d1e6967d75e7c986bddef"
+    },
+    {
+      "path": "lslidar_driver/config/lslidar_cx_right.yaml",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/config/lslidar_cx_right.yaml",
+      "sha256": "53df0f3ad1c363cead13a0b67bf161d5ddf978340e9258701b06584d9a13104b"
+    },
+    {
+      "path": "lslidar_driver/config/lslidar_ls.yaml",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/config/lslidar_ls.yaml",
+      "sha256": "7187c45911de16d5cd86e52e5ffb9a4741fb111cea00f82aefe5dee932a299bd"
+    },
+    {
+      "path": "lslidar_driver/config/lslidar_m10p_left.yaml",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/config/lslidar_m10p_left.yaml",
+      "sha256": "6529deb3f41bcab29f67d55e9fb32029a96247891a80231457dc6b380f151662"
+    },
+    {
+      "path": "lslidar_driver/config/lslidar_m10p_right.yaml",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/config/lslidar_m10p_right.yaml",
+      "sha256": "b55913332dbc24184da133f1d854d88973f6d7a317f70cb84407594408d89c26"
+    },
+    {
+      "path": "lslidar_driver/config/lslidar_x10.yaml",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/config/lslidar_x10.yaml",
+      "sha256": "50f8243ee5a1874aadfb53d3c28f825ac5dee8fcbf1685b52d56ce7a0851b84f"
+    },
+    {
+      "path": "lslidar_driver/config/network_setup.yaml",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/config/network_setup.yaml",
+      "sha256": "ea5dfe5e8b0f23b9c8ade848ec97341c60ee4f6a26fcb2fea4625d4535d5bd12"
+    },
+    {
+      "path": "lslidar_driver/include/lslidar_driver/ThreadPool.h",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/include/lslidar_driver/ThreadPool.h",
+      "sha256": "39ed9b40268cb8b759794ea5b9e76072afa643a97b77810eaef7a9b671085702"
+    },
+    {
+      "path": "lslidar_driver/include/lslidar_driver/data_acquisition_strategy.hpp",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/include/lslidar_driver/data_acquisition_strategy.hpp",
+      "sha256": "7fdcb2f0c7945d3424e08158f3b14c8cee17fa75e6c94a0d6745f2e654934be1"
+    },
+    {
+      "path": "lslidar_driver/include/lslidar_driver/input.hpp",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/include/lslidar_driver/input.hpp",
+      "sha256": "1a4ef6a0353bac11ed2ced31da038aec437e9d68e5a622ca7c926db1a650f6d5"
+    },
+    {
+      "path": "lslidar_driver/include/lslidar_driver/lsiosr.hpp",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/include/lslidar_driver/lsiosr.hpp",
+      "sha256": "db0d4e24314405a4ce5e422c6ff5223b7def44dee29c471bb8d05c347e6ee181"
+    },
+    {
+      "path": "lslidar_driver/include/lslidar_driver/lslidar_ch_driver.hpp",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/include/lslidar_driver/lslidar_ch_driver.hpp",
+      "sha256": "19bdb8646f493c5cf6136d778b8cbbefcf9cb06c5517225f0c283762238c19ac"
+    },
+    {
+      "path": "lslidar_driver/include/lslidar_driver/lslidar_cx_driver.hpp",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/include/lslidar_driver/lslidar_cx_driver.hpp",
+      "sha256": "9821c3a00955503428855c1fecf1a8cd8e433e9cfdf8a90fa9dc15c93c3f156b"
+    },
+    {
+      "path": "lslidar_driver/include/lslidar_driver/lslidar_device_info.hpp",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/include/lslidar_driver/lslidar_device_info.hpp",
+      "sha256": "6839f930ad0af515e916af6181665671410090a1d9288279ba49faa665c3f19f"
+    },
+    {
+      "path": "lslidar_driver/include/lslidar_driver/lslidar_driver.hpp",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/include/lslidar_driver/lslidar_driver.hpp",
+      "sha256": "b787f75aa787fc529f0c16327f7ffa0fb833f5c7256c1d4d08e0b358c3c146bc"
+    },
+    {
+      "path": "lslidar_driver/include/lslidar_driver/lslidar_log.hpp",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/include/lslidar_driver/lslidar_log.hpp",
+      "sha256": "e7de0d6112e4571aeed69070ecb75b949e70035f7898ac6148ca393e7d127fa1"
+    },
+    {
+      "path": "lslidar_driver/include/lslidar_driver/lslidar_ls_driver.hpp",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/include/lslidar_driver/lslidar_ls_driver.hpp",
+      "sha256": "bb1214fb9e2e07ff0d130ac503faf9b6b517b049a5c5deea70abc31c5d8e9ebe"
+    },
+    {
+      "path": "lslidar_driver/include/lslidar_driver/lslidar_pointcloud.hpp",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/include/lslidar_driver/lslidar_pointcloud.hpp",
+      "sha256": "8e4fcfc802c5b33825a37865a367a524c024400ee585fb585e016c426f1fe021"
+    },
+    {
+      "path": "lslidar_driver/include/lslidar_driver/lslidar_services.hpp",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/include/lslidar_driver/lslidar_services.hpp",
+      "sha256": "bf87cd724e46bdc400e880e739343faaa72019a428f505fec25bdd47dc2a57f2"
+    },
+    {
+      "path": "lslidar_driver/include/lslidar_driver/lslidar_x10_driver.hpp",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/include/lslidar_driver/lslidar_x10_driver.hpp",
+      "sha256": "f1ba383729b9735cbcf22a508c48d8bc7551fbd47c2cf062cb1da250c426fd45"
+    },
+    {
+      "path": "lslidar_driver/include/lslidar_driver/pointcloud_transform.hpp",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/include/lslidar_driver/pointcloud_transform.hpp",
+      "sha256": "6eb0f1fc48738dd69601f14e27a72e1d8f8e6b60a45d620dafac86fbe8f6055b"
+    },
+    {
+      "path": "lslidar_driver/launch/lslidar_ch_launch.py",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/launch/lslidar_ch_launch.py",
+      "sha256": "f25645bbb5c36f70a8fe9451c691303b2dd0a3a7e19bdac48021c232b6733a7b"
+    },
+    {
+      "path": "lslidar_driver/launch/lslidar_cx_launch.py",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/launch/lslidar_cx_launch.py",
+      "sha256": "21be04f2356097e5c8e575faf7dc1976477f7e176a3dce0517893b123c28e8b0"
+    },
+    {
+      "path": "lslidar_driver/launch/lslidar_double_launch.py",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/launch/lslidar_double_launch.py",
+      "sha256": "b0851cb5a6baa74f06ddc9b1f2ff857cce35a0667ec004e2c77d258505adab56"
+    },
+    {
+      "path": "lslidar_driver/launch/lslidar_ls_launch.py",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/launch/lslidar_ls_launch.py",
+      "sha256": "8d75e0cbaab7e3d27e544e00391c5fc1c0fc8ddb63ac26943dfe57a95280ba23"
+    },
+    {
+      "path": "lslidar_driver/launch/lslidar_m10p_double.launch.py",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/launch/lslidar_m10p_double.launch.py",
+      "sha256": "028d7d05c0bf115ac3bab523e56f1eeef02ebb6bbb4bb49be34e1b70baeac9a5"
+    },
+    {
+      "path": "lslidar_driver/launch/lslidar_x10_launch.py",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/launch/lslidar_x10_launch.py",
+      "sha256": "a1f94082413e10974f9b49fd67b285a4b90d3285e5865d0edbbdbce7409d3776"
+    },
+    {
+      "path": "lslidar_driver/package.xml",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/package.xml",
+      "sha256": "61075a31bcc5f9f4be36d94e6c510188516072ce8ed28fb2161b599d0ba6147b"
+    },
+    {
+      "path": "lslidar_driver/rviz/lslidar_ch.rviz",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/rviz/lslidar_ch.rviz",
+      "sha256": "587d80c6f54aa05bdc96537fd9088276b4f8e12423e4dbce9795653b8d4d11f7"
+    },
+    {
+      "path": "lslidar_driver/rviz/lslidar_cx.rviz",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/rviz/lslidar_cx.rviz",
+      "sha256": "3f70e462075ec8b071ab3e786810ce2f12f1635a34a114e7a50111235053a51e"
+    },
+    {
+      "path": "lslidar_driver/rviz/lslidar_ls.rviz",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/rviz/lslidar_ls.rviz",
+      "sha256": "51f5d1a40ca5e4fc35f32c99ec6b61975a47d5c719f2eaba6216a58abe8eacb3"
+    },
+    {
+      "path": "lslidar_driver/rviz/lslidar_x10.rviz",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/rviz/lslidar_x10.rviz",
+      "sha256": "b8524a255506958cf08f82661127129945c26b3f04f9394c45189624f4f0bd35"
+    },
+    {
+      "path": "lslidar_driver/src/input.cpp",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/src/input.cpp",
+      "sha256": "7c1d770beb33ce346cfac82e3976931fdbc43af77bdf589771a7b6fb27b40bc8"
+    },
+    {
+      "path": "lslidar_driver/src/lsiosr.cpp",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/src/lsiosr.cpp",
+      "sha256": "8ba2ca4ecdc88c00f6ebcbc873abb751e2278c2df78b054e4f923f551133596a"
+    },
+    {
+      "path": "lslidar_driver/src/lslidar_ch_driver.cpp",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/src/lslidar_ch_driver.cpp",
+      "sha256": "f7e1c261e792399a33b81aa9b60035fab41f6325ad3fd5fdb46f89dff19e3db4"
+    },
+    {
+      "path": "lslidar_driver/src/lslidar_cx_driver.cpp",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/src/lslidar_cx_driver.cpp",
+      "sha256": "c37cf04ee9167487d5e4dffa8df10c723fadc7bd651857fc391f6862fcd3a76c"
+    },
+    {
+      "path": "lslidar_driver/src/lslidar_device_info.cpp",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/src/lslidar_device_info.cpp",
+      "sha256": "b69953a0799f9b7e48c6954bda41ccf87c88149c1965c61b9a2619117ff715fe"
+    },
+    {
+      "path": "lslidar_driver/src/lslidar_driver_node.cpp",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/src/lslidar_driver_node.cpp",
+      "sha256": "ad4932c777a94cfd50d44f5a3b542d9f1a2421ed86ebf859c7eb957d2cbb6919"
+    },
+    {
+      "path": "lslidar_driver/src/lslidar_ls_driver.cpp",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/src/lslidar_ls_driver.cpp",
+      "sha256": "cc42d9b18456b6b57c0c80130f6c8681043b6be6c4ff7a863501c6739ab68040"
+    },
+    {
+      "path": "lslidar_driver/src/lslidar_services.cpp",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/src/lslidar_services.cpp",
+      "sha256": "f9063103ee257a26d75039dd60119ef496c15218db8e764ed1db13cb0cf5de2d"
+    },
+    {
+      "path": "lslidar_driver/src/lslidar_x10_driver.cpp",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_driver/src/lslidar_x10_driver.cpp",
+      "sha256": "c1ba073b29c8621ce74f28734811f9d8bcca686e01d1c24913c87df214a5bcae"
+    },
+    {
+      "path": "lslidar_msgs/CMakeLists.txt",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_msgs/CMakeLists.txt",
+      "sha256": "d26dba3398020eaa519fff553ad0326684f665790606b0e887ebbef20160019b"
+    },
+    {
+      "path": "lslidar_msgs/msg/LslidarInformation.msg",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_msgs/msg/LslidarInformation.msg",
+      "sha256": "ec7aee2f1bd134e3965ffe16ee0841406ede1f4d731738926f6fc7111f897aeb"
+    },
+    {
+      "path": "lslidar_msgs/msg/LslidarPacket.msg",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_msgs/msg/LslidarPacket.msg",
+      "sha256": "dab59b87ad186114864dc150d2d8cb6cb4fac81b8c259ff64b3351798f034e7c"
+    },
+    {
+      "path": "lslidar_msgs/package.xml",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_msgs/package.xml",
+      "sha256": "708217820d8163b90394177ec3fb05adbf8016e615fd1a2c2d4d77770e2d54f1"
+    },
+    {
+      "path": "lslidar_msgs/srv/AngleDistortionCorrection.srv",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_msgs/srv/AngleDistortionCorrection.srv",
+      "sha256": "f1c7a5955b7b77484537388948baa6f2e12394e2914c43f7f45464c52e0e2e10"
+    },
+    {
+      "path": "lslidar_msgs/srv/FrameRate.srv",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_msgs/srv/FrameRate.srv",
+      "sha256": "561056310b6c13d013a09b55b7f87f2e18a2cdc9219be5cb6f427b0635c837a9"
+    },
+    {
+      "path": "lslidar_msgs/srv/InvalidData.srv",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_msgs/srv/InvalidData.srv",
+      "sha256": "29d9aafa39988271cadef69e66ddea3435fca2b658b6752835bcd81d718f72d7"
+    },
+    {
+      "path": "lslidar_msgs/srv/IpAndPort.srv",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_msgs/srv/IpAndPort.srv",
+      "sha256": "d44b7b748af701493063c1f07bdc8812972c1096802a2df3d709694af2a3143e"
+    },
+    {
+      "path": "lslidar_msgs/srv/MotorControl.srv",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_msgs/srv/MotorControl.srv",
+      "sha256": "ebff6cbabb43892e69582e7ab57510d1d29a14bf454fbf508553f01932c13400"
+    },
+    {
+      "path": "lslidar_msgs/srv/MotorSpeed.srv",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_msgs/srv/MotorSpeed.srv",
+      "sha256": "e33eb24b8bb56e44158ca0bb95f1e4883c6617e5d47ef1f9b0ef1aa2a1d5d33d"
+    },
+    {
+      "path": "lslidar_msgs/srv/PowerControl.srv",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_msgs/srv/PowerControl.srv",
+      "sha256": "54bcce21dcc0d594c54ba6157adf0950b3b0a19bc369776619e666fd2aa82a51"
+    },
+    {
+      "path": "lslidar_msgs/srv/RfdRemoval.srv",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_msgs/srv/RfdRemoval.srv",
+      "sha256": "562865285f9fe681792bdebe55b80e210b216d2e3489cba83a29910ec60a0313"
+    },
+    {
+      "path": "lslidar_msgs/srv/StandbyMode.srv",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_msgs/srv/StandbyMode.srv",
+      "sha256": "85bfa19ffa4356dc6ce40fd867ff6da68906e2b84f9285917d76f96c60940455"
+    },
+    {
+      "path": "lslidar_msgs/srv/TailRemoval.srv",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_msgs/srv/TailRemoval.srv",
+      "sha256": "16f838c09e493f677f054c5220f81e39e989785a6e52454473946bc56f5911f9"
+    },
+    {
+      "path": "lslidar_msgs/srv/TimeMode.srv",
+      "source": "wheeltec_lidar_ros2/lslidar_ros2/lslidar_msgs/srv/TimeMode.srv",
+      "sha256": "2d7f90f37cb6dcb1cc4730cff6db431a47fd680615062ab089480ae076b4d251"
+    },
+    {
+      "path": "serial/CMakeLists.txt",
+      "source": "depend/serial_ros2/CMakeLists.txt",
+      "sha256": "3880ad16cf227af29595f3815ecf43c645c41a7cccd0ed12b6a404139720cc4b"
+    },
+    {
+      "path": "serial/README.md",
+      "source": "depend/serial_ros2/README.md",
+      "sha256": "6bbde4ded95c12ed6a778aee5d1fdc09fc5869e37728e605cd708fad1ca482f4"
+    },
+    {
+      "path": "serial/include/serial/impl/unix.h",
+      "source": "depend/serial_ros2/include/serial/impl/unix.h",
+      "sha256": "b5fb6fe5dc66aa262c4fcd602c677938bf9a65ddc2010c7b022c7aade1f36bc6"
+    },
+    {
+      "path": "serial/include/serial/impl/win.h",
+      "source": "depend/serial_ros2/include/serial/impl/win.h",
+      "sha256": "416e11faeaae7df28f47e801a58cb1d9ac78d7413a43cb70830a2d1271a889fc"
+    },
+    {
+      "path": "serial/include/serial/serial.h",
+      "source": "depend/serial_ros2/include/serial/serial.h",
+      "sha256": "f4dcb008056f41fbb80357da817959e8cf5e2f6d04fb79a416b4fedd68a8a0d7"
+    },
+    {
+      "path": "serial/include/serial/v8stdint.h",
+      "source": "depend/serial_ros2/include/serial/v8stdint.h",
+      "sha256": "d1155ad61ee6583c90ce3abb174239fbb677627e8220fb8518c8d5e4d3d16e5d"
+    },
+    {
+      "path": "serial/package.xml",
+      "source": "depend/serial_ros2/package.xml",
+      "sha256": "aadb544cccda9705cee5b9e4eccde74a645a34a1f7de4c432253540bc891b7fe"
+    },
+    {
+      "path": "serial/src/impl/list_ports/list_ports_linux.cc",
+      "source": "depend/serial_ros2/src/impl/list_ports/list_ports_linux.cc",
+      "sha256": "f67417b8ba5fd2718f9a14d705f4f939132700f0a43ae647e9c58559681b4694"
+    },
+    {
+      "path": "serial/src/impl/list_ports/list_ports_osx.cc",
+      "source": "depend/serial_ros2/src/impl/list_ports/list_ports_osx.cc",
+      "sha256": "19665d16a5bba094206f746f91811632abacad4f5bbe41232c9bcfe30731af79"
+    },
+    {
+      "path": "serial/src/impl/list_ports/list_ports_win.cc",
+      "source": "depend/serial_ros2/src/impl/list_ports/list_ports_win.cc",
+      "sha256": "ddf2bda16022f97b64fa5170545a22a48da5c675f8e09e5863ec3897cd80e4bc"
+    },
+    {
+      "path": "serial/src/impl/unix.cc",
+      "source": "depend/serial_ros2/src/impl/unix.cc",
+      "sha256": "afdc2b157831400116c45ed879f0eaaad450925ee0a15a2f033e362baecf11d2"
+    },
+    {
+      "path": "serial/src/impl/win.cc",
+      "source": "depend/serial_ros2/src/impl/win.cc",
+      "sha256": "c2a1e36c1f25aa82e9c5242c0263941a93de664f60d48dbbec12c3ce7d1d9704"
+    },
+    {
+      "path": "serial/src/serial.cc",
+      "source": "depend/serial_ros2/src/serial.cc",
+      "sha256": "7702b646a57e8257db057272773f6a8e54b396a7d09b3d98a01040aa1cee805c"
+    },
+    {
+      "path": "turn_on_wheeltec_robot/CMakeLists.txt",
+      "source": "turn_on_wheeltec_robot/CMakeLists.txt",
+      "sha256": "8782c74b307b21557b3549657e4e1faf0b709a197fe3d6d9808c7451a3f53656"
+    },
+    {
+      "path": "turn_on_wheeltec_robot/config/camera_info.yaml",
+      "source": "turn_on_wheeltec_robot/config/camera_info.yaml",
+      "sha256": "c142cd2f6305b369d365dabbeadf4b1ab14c8749f228e1666340212d3f3c1cb1"
+    },
+    {
+      "path": "turn_on_wheeltec_robot/config/ekf.yaml",
+      "source": "turn_on_wheeltec_robot/config/ekf.yaml",
+      "sha256": "bd07d02442dc31860934d9b85759554b32a241e1efba57d433dba81b09a89aa5"
+    },
+    {
+      "path": "turn_on_wheeltec_robot/config/ekf_carto.yaml",
+      "source": "turn_on_wheeltec_robot/config/ekf_carto.yaml",
+      "sha256": "486ce54761d56f22c6d816d673a05bc3cf94e8a8afedad85e4191b701188d44d"
+    },
+    {
+      "path": "turn_on_wheeltec_robot/config/ekf_nav.yaml",
+      "source": "turn_on_wheeltec_robot/config/ekf_nav.yaml",
+      "sha256": "bb6710ddd46c505b6d7cda14eb1e08459ad619d6e8ca2e66c368ae44a88458ba"
+    },
+    {
+      "path": "turn_on_wheeltec_robot/config/imu.yaml",
+      "source": "turn_on_wheeltec_robot/config/imu.yaml",
+      "sha256": "81c0aa390b15db17a3e9cd49e7eca161a87b0c27792ea82f8dcca2d6f7065cb6"
+    },
+    {
+      "path": "turn_on_wheeltec_robot/config/robot_model.yaml",
+      "source": "turn_on_wheeltec_robot/config/robot_model.yaml",
+      "sha256": "d6af59928e008e1701ac9b82f0e29c21ec165f03965582079ad7d647cc26c1a2"
+    },
+    {
+      "path": "turn_on_wheeltec_robot/config/wheeltec_param.yaml",
+      "source": "turn_on_wheeltec_robot/config/wheeltec_param.yaml",
+      "sha256": "85c40c9504a324a0bbe21bde388c2098da5b052d174134dc7f26cb1dbb10607f"
+    },
+    {
+      "path": "turn_on_wheeltec_robot/config/wheeltec_param_back.yaml",
+      "source": "turn_on_wheeltec_robot/config/wheeltec_param_back.yaml",
+      "sha256": "0404dd66fb6805d6dc816a0a751a4ff943655aad8088d00879dffe2bca507508"
+    },
+    {
+      "path": "turn_on_wheeltec_robot/include/turn_on_wheeltec_robot/Quaternion_Solution.h",
+      "source": "turn_on_wheeltec_robot/include/turn_on_wheeltec_robot/Quaternion_Solution.h",
+      "sha256": "06c510b279ad4589b8498c577ad5561b06fef45dc74eb662160685a1e8630496"
+    },
+    {
+      "path": "turn_on_wheeltec_robot/include/turn_on_wheeltec_robot/wheeltec_robot.h",
+      "source": "turn_on_wheeltec_robot/include/turn_on_wheeltec_robot/wheeltec_robot.h",
+      "sha256": "82c9c92b7832bfe23a26952cbb6b5ebabbfb7c0d20abe6bdbf0c1377d5f940ae"
+    },
+    {
+      "path": "turn_on_wheeltec_robot/launch/base_serial.launch.py",
+      "source": "turn_on_wheeltec_robot/launch/base_serial.launch.py",
+      "sha256": "1728c5cad17fd957ccf565c1331f4cc1f7c62235c233d73e68e0d0698a21c89a"
+    },
+    {
+      "path": "turn_on_wheeltec_robot/launch/imu_processor.launch.py",
+      "source": "turn_on_wheeltec_robot/launch/imu_processor.launch.py",
+      "sha256": "6593aa7d7244800810020eb17dbc7cc2a117ab49064e9bbfdbb95ec99cf46eaf"
+    },
+    {
+      "path": "turn_on_wheeltec_robot/launch/robot_mode_description.launch.py",
+      "source": "turn_on_wheeltec_robot/launch/robot_mode_description.launch.py",
+      "sha256": "14bd4a36c9c1d125e621bdba04739419082febe438b2c7a7a448629af773ffb7"
+    },
+    {
+      "path": "turn_on_wheeltec_robot/launch/turn_on_wheeltec_robot.launch.py",
+      "source": "turn_on_wheeltec_robot/launch/turn_on_wheeltec_robot.launch.py",
+      "sha256": "24162aa3c2bb285c929746805d0ff8671833f7fa775d6b88e2737b6b4e2a79a5"
+    },
+    {
+      "path": "turn_on_wheeltec_robot/launch/wheeltec_camera.launch.py",
+      "source": "turn_on_wheeltec_robot/launch/wheeltec_camera.launch.py",
+      "sha256": "f921d4cb23409d6418dbf8e7c667f52a0f99e468e3e3c4efc3c6d96cbbb590ac"
+    },
+    {
+      "path": "turn_on_wheeltec_robot/launch/wheeltec_ekf.launch.py",
+      "source": "turn_on_wheeltec_robot/launch/wheeltec_ekf.launch.py",
+      "sha256": "f779f108cb64d5284039e4b166f8480615540ca63125a8db37aafb4506e8285c"
+    },
+    {
+      "path": "turn_on_wheeltec_robot/launch/wheeltec_lidar.launch.py",
+      "source": "turn_on_wheeltec_robot/launch/wheeltec_lidar.launch.py",
+      "sha256": "4759004aea726cfd6cf5f0422a70846faa3205837d3ddf31ad9e65d0489a2b16"
+    },
+    {
+      "path": "turn_on_wheeltec_robot/launch/wheeltec_sensors.launch.py",
+      "source": "turn_on_wheeltec_robot/launch/wheeltec_sensors.launch.py",
+      "sha256": "e8f7d2ffea7b6f88d00cdb535f26f2ae77525d967dde2942a275a47cf4bb5b26"
+    },
+    {
+      "path": "turn_on_wheeltec_robot/msg/Position.msg",
+      "source": "turn_on_wheeltec_robot/msg/Position.msg",
+      "sha256": "efb7be732555e791a4506665776d39b4216c4d99d6869f7001c0cc1e7cec7e3d"
+    },
+    {
+      "path": "turn_on_wheeltec_robot/package.xml",
+      "source": "turn_on_wheeltec_robot/package.xml",
+      "sha256": "ddc974e19a89e62b55369e86d3d7c3c688dbb488f16763b28c35222088692e46"
+    },
+    {
+      "path": "turn_on_wheeltec_robot/src/ImuProcessor.cpp",
+      "source": "turn_on_wheeltec_robot/src/ImuProcessor.cpp",
+      "sha256": "aeea380f2d63c57e16569ecf25829d990931836d434dc4ddc9a3341a3d023512"
+    },
+    {
+      "path": "turn_on_wheeltec_robot/src/Quaternion_Solution.cpp",
+      "source": "turn_on_wheeltec_robot/src/Quaternion_Solution.cpp",
+      "sha256": "21857d55cde9698af983167a6ca3ba7134064ca4a6dbdc59688550fa9a5ff7fd"
+    },
+    {
+      "path": "turn_on_wheeltec_robot/src/wheeltec_robot.cpp",
+      "source": "turn_on_wheeltec_robot/src/wheeltec_robot.cpp",
+      "sha256": "c96da6f956f3568f0ba2fe3de2c151c41127fe5a0b3f386f1213c5b3609ee55d"
+    },
+    {
+      "path": "turn_on_wheeltec_robot/wheeltec_udev.sh",
+      "source": "turn_on_wheeltec_robot/wheeltec_udev.sh",
+      "sha256": "55ebc01ec6d0951470c72ecfc176b564296f4f91ac2643e3255c48066ddb3c43"
+    },
+    {
+      "path": "wheeltec_robot_msg/CMakeLists.txt",
+      "source": "wheeltec_robot_msg/CMakeLists.txt",
+      "sha256": "2a710fbe1e6e155d50fc2b9383977087141b3d8195a2b8ade82991a5a5bd7abf"
+    },
+    {
+      "path": "wheeltec_robot_msg/msg/Data.msg",
+      "source": "wheeltec_robot_msg/msg/Data.msg",
+      "sha256": "56a0e0da8274dc8cd2ead5bdd7f3596ef913a26cf358968d50f5531f0dc246d6"
+    },
+    {
+      "path": "wheeltec_robot_msg/msg/Supersonic.msg",
+      "source": "wheeltec_robot_msg/msg/Supersonic.msg",
+      "sha256": "fa81d75b190aca3b31377f69872ef75e6bacb2d279c6c068882b468164aef79e"
+    },
+    {
+      "path": "wheeltec_robot_msg/package.xml",
+      "source": "wheeltec_robot_msg/package.xml",
+      "sha256": "68ae56ab75f84e6eb1cd87e38227b1017cdd3c2970bb7a355bd7fd7745987eb9"
+    },
+    {
+      "path": "wheeltec_robot_urdf/CHANGELOG.rst",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/CHANGELOG.rst",
+      "sha256": "7914d4db33c99776dfcb9a98985382f5503c014d2a32c5e9344a614c2c54dd5b"
+    },
+    {
+      "path": "wheeltec_robot_urdf/CMakeLists.txt",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/CMakeLists.txt",
+      "sha256": "8e73d8c7df8a33816da900619d1234463af2e81c4052f226c99dc2ac52f89b02"
+    },
+    {
+      "path": "wheeltec_robot_urdf/meshes/V550_4wd_robot_meshes/base_link.STL",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/meshes/V550_4wd_robot_meshes/base_link.STL",
+      "sha256": "af2e1c226b4792ee72790457e5fe45388717cd5d58193451671a53b4abe7e962"
+    },
+    {
+      "path": "wheeltec_robot_urdf/meshes/V550_4wd_robot_meshes/camera_link.STL",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/meshes/V550_4wd_robot_meshes/camera_link.STL",
+      "sha256": "a6aab241e2c8a6cd57237de93381ea9c95237eb1d83e6b094f9c88524e155f62"
+    },
+    {
+      "path": "wheeltec_robot_urdf/meshes/V550_4wd_robot_meshes/controller_link.STL",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/meshes/V550_4wd_robot_meshes/controller_link.STL",
+      "sha256": "c09762bfd6d14812f727fa5423999b2a363e0bfa1ca431917218ab74f7fb7fc8"
+    },
+    {
+      "path": "wheeltec_robot_urdf/meshes/V550_4wd_robot_meshes/laser.STL",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/meshes/V550_4wd_robot_meshes/laser.STL",
+      "sha256": "45f52d740061f34dcaceb5b7c492bcfb425f3c98d65305fe541519be96513300"
+    },
+    {
+      "path": "wheeltec_robot_urdf/meshes/V550_4wd_robot_meshes/lb_wheel_link.STL",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/meshes/V550_4wd_robot_meshes/lb_wheel_link.STL",
+      "sha256": "881fbc2640dfbb30476be0b57b971af050bbee389ff0ce6a2dd0cb9c696f197a"
+    },
+    {
+      "path": "wheeltec_robot_urdf/meshes/V550_4wd_robot_meshes/lf_wheel_link.STL",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/meshes/V550_4wd_robot_meshes/lf_wheel_link.STL",
+      "sha256": "239b2b24f41d74433aed9bf5819d0843d3dbec752b7ec1f747545bdc6f4dbe49"
+    },
+    {
+      "path": "wheeltec_robot_urdf/meshes/V550_4wd_robot_meshes/rb_wheel_link.STL",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/meshes/V550_4wd_robot_meshes/rb_wheel_link.STL",
+      "sha256": "f272d5d493b7fef8935a8aba38dec83817adfbb82f8c2fbeb9bf9cb3ec1340db"
+    },
+    {
+      "path": "wheeltec_robot_urdf/meshes/V550_4wd_robot_meshes/rf_wheel_link.STL",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/meshes/V550_4wd_robot_meshes/rf_wheel_link.STL",
+      "sha256": "94bbc3cb294696a710ff1d1d117f25e8d4fd7db04156d0f3a3fb8ebfce526c00"
+    },
+    {
+      "path": "wheeltec_robot_urdf/meshes/V550_akm_robot_meshes/base_link.STL",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/meshes/V550_akm_robot_meshes/base_link.STL",
+      "sha256": "566f023abbb203dc67c189112bb9b16fd583996448d86f67f91cadf58c2d3093"
+    },
+    {
+      "path": "wheeltec_robot_urdf/meshes/V550_akm_robot_meshes/camera_link.STL",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/meshes/V550_akm_robot_meshes/camera_link.STL",
+      "sha256": "fd1d9705b8295c6b208685ffc0ab552e7c417e93eb0fbb82a407f29bb7ded6d2"
+    },
+    {
+      "path": "wheeltec_robot_urdf/meshes/V550_akm_robot_meshes/controller_link.STL",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/meshes/V550_akm_robot_meshes/controller_link.STL",
+      "sha256": "2a75a85ac2f000a5b6b45c55153af331c5576cce15da71f3c3f9dd418116d918"
+    },
+    {
+      "path": "wheeltec_robot_urdf/meshes/V550_akm_robot_meshes/laser_link.STL",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/meshes/V550_akm_robot_meshes/laser_link.STL",
+      "sha256": "b2f74e774b6eccf569c642987d6ba34741d89e37a4781b7d21fa9ec29e5a428a"
+    },
+    {
+      "path": "wheeltec_robot_urdf/meshes/V550_akm_robot_meshes/lb_wheel_link.STL",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/meshes/V550_akm_robot_meshes/lb_wheel_link.STL",
+      "sha256": "20c9b659fc0e6fe11c41ad723e8af764b043f0005fc0a01ae2f5dac47ba998c6"
+    },
+    {
+      "path": "wheeltec_robot_urdf/meshes/V550_akm_robot_meshes/lf_wheel_link.STL",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/meshes/V550_akm_robot_meshes/lf_wheel_link.STL",
+      "sha256": "247ef859c59bdd30b32ead8cfc840bffd73ec72e8bdef9689cee6ac2d346db57"
+    },
+    {
+      "path": "wheeltec_robot_urdf/meshes/V550_akm_robot_meshes/rb_wheel_link.STL",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/meshes/V550_akm_robot_meshes/rb_wheel_link.STL",
+      "sha256": "8bc53dc2dd5bdaefd43517a82138b5a491bfb055b5b0e284b98a2aef6ea376e6"
+    },
+    {
+      "path": "wheeltec_robot_urdf/meshes/V550_akm_robot_meshes/rf_wheel_link.STL",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/meshes/V550_akm_robot_meshes/rf_wheel_link.STL",
+      "sha256": "7c823c26fd4c75afe9e969b944b5e3cee613bd61fe0411b8ca06d65d06280365"
+    },
+    {
+      "path": "wheeltec_robot_urdf/meshes/V550_mec_robot_meshes/base_link.STL",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/meshes/V550_mec_robot_meshes/base_link.STL",
+      "sha256": "476dbac5fb3f0de44b8c525ad5c8b594c272df8414be18d53dfefd180e880fe1"
+    },
+    {
+      "path": "wheeltec_robot_urdf/meshes/V550_mec_robot_meshes/camera_link.STL",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/meshes/V550_mec_robot_meshes/camera_link.STL",
+      "sha256": "3d33c7a2ff8aabe59d604ce245b0774de64ca5b5eb2f5cb80687601b4d9faf64"
+    },
+    {
+      "path": "wheeltec_robot_urdf/meshes/V550_mec_robot_meshes/controller_link.STL",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/meshes/V550_mec_robot_meshes/controller_link.STL",
+      "sha256": "fe8b2158dc4d778d0cdd001fe452fd2cb9f0e30e4202c033bbdf35960a121dda"
+    },
+    {
+      "path": "wheeltec_robot_urdf/meshes/V550_mec_robot_meshes/laser.STL",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/meshes/V550_mec_robot_meshes/laser.STL",
+      "sha256": "7cfb9dbfa88fab18a92fc15d84c36594a16cdbb0f837437a86356760e0974a98"
+    },
+    {
+      "path": "wheeltec_robot_urdf/meshes/V550_mec_robot_meshes/lb_wheel_link.STL",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/meshes/V550_mec_robot_meshes/lb_wheel_link.STL",
+      "sha256": "5428df0c6e8a929cc26b9e5291b4780575deff02f9bd05fabfc2d53eca56e9bc"
+    },
+    {
+      "path": "wheeltec_robot_urdf/meshes/V550_mec_robot_meshes/lf_wheel_link.STL",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/meshes/V550_mec_robot_meshes/lf_wheel_link.STL",
+      "sha256": "cd85c0092965e846b7ac982d6e35eda658ebd937636449fd6263131bb7b72372"
+    },
+    {
+      "path": "wheeltec_robot_urdf/meshes/V550_mec_robot_meshes/rb_wheel_link.STL",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/meshes/V550_mec_robot_meshes/rb_wheel_link.STL",
+      "sha256": "f30befe697451586d522fcaa059db841614ddc2ca7ca43748173b86cceb249a2"
+    },
+    {
+      "path": "wheeltec_robot_urdf/meshes/V550_mec_robot_meshes/rf_wheel_link.STL",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/meshes/V550_mec_robot_meshes/rf_wheel_link.STL",
+      "sha256": "1d64ab050c7b982cd138ae6cccbbb4bd11602849144b3be9b990c91f82786618"
+    },
+    {
+      "path": "wheeltec_robot_urdf/package.xml",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/package.xml",
+      "sha256": "b5ffc703d76f5017328a87bc022d7bdb041b4c6b749008aed84acfd62a8fa7ef"
+    },
+    {
+      "path": "wheeltec_robot_urdf/rviz/model.rviz",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/rviz/model.rviz",
+      "sha256": "8381645ebf39edd34509c1e4a23d9b2bf8bbf11cd32cb5150ad10d13f36ec75e"
+    },
+    {
+      "path": "wheeltec_robot_urdf/urdf/V550_4wd_robot.urdf",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/urdf/V550_4wd_robot.urdf",
+      "sha256": "97bd3c8adeba20d100e1ce0cba08447a7fbfc22895b280cb03fa7c88f4ea6402"
+    },
+    {
+      "path": "wheeltec_robot_urdf/urdf/V550_akm_robot.urdf",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/urdf/V550_akm_robot.urdf",
+      "sha256": "e4fcabcb2bd31e126584b6465ea75b522f2bd892662cc80e90c2d181599ac153"
+    },
+    {
+      "path": "wheeltec_robot_urdf/urdf/V550_mec_robot.urdf",
+      "source": "wheeltec_robot_urdf/wheeltec_robot_urdf/urdf/V550_mec_robot.urdf",
+      "sha256": "5061f41de8e6d308dbbb9ec2170b53664ca989d1bc80e5f48f1ebac1d0c38ce6"
+    },
+    {
+      "path": "wheeltec_slam_toolbox/CMakeLists.txt",
+      "source": "wheeltec_robot_slam/wheeltec_slam_toolbox/CMakeLists.txt",
+      "sha256": "eec7a0ba65fb6090f9fd08a5e183bca37ce3bbded5e912c4336e544479d82489"
+    },
+    {
+      "path": "wheeltec_slam_toolbox/config/mapper_params_localization.yaml",
+      "source": "wheeltec_robot_slam/wheeltec_slam_toolbox/config/mapper_params_localization.yaml",
+      "sha256": "3168a42ce5721d1c3e3dbe1d90cc946d7a79d7bfd2d1c6274587d185e228e120"
+    },
+    {
+      "path": "wheeltec_slam_toolbox/config/mapper_params_online_async.yaml",
+      "source": "wheeltec_robot_slam/wheeltec_slam_toolbox/config/mapper_params_online_async.yaml",
+      "sha256": "471596e2b82cf61f3ace1893986fd0d667cafbf8a462aed977be680d52937dd8"
+    },
+    {
+      "path": "wheeltec_slam_toolbox/config/mapper_params_online_sync.yaml",
+      "source": "wheeltec_robot_slam/wheeltec_slam_toolbox/config/mapper_params_online_sync.yaml",
+      "sha256": "92bb60f491422b0526cdf65c8217c91ddf9626db2d6999773f33bd6b8b0fc812"
+    },
+    {
+      "path": "wheeltec_slam_toolbox/launch/localization_launch.py",
+      "source": "wheeltec_robot_slam/wheeltec_slam_toolbox/launch/localization_launch.py",
+      "sha256": "65032e490a9b381d806962c60508d562c29f4b3c267ae5d0b526b3c814047b4d"
+    },
+    {
+      "path": "wheeltec_slam_toolbox/launch/online_async_launch.py",
+      "source": "wheeltec_robot_slam/wheeltec_slam_toolbox/launch/online_async_launch.py",
+      "sha256": "b7a210186ab4561a774b3489e73d0a6210aa2b54b12163afc2487d194090f927"
+    },
+    {
+      "path": "wheeltec_slam_toolbox/launch/online_sync.launch.py",
+      "source": "wheeltec_robot_slam/wheeltec_slam_toolbox/launch/online_sync.launch.py",
+      "sha256": "af99c7fbce296083f6c68ed279aeb90223656cc31905783e34307ac26d8e5db1"
+    },
+    {
+      "path": "wheeltec_slam_toolbox/package.xml",
+      "source": "wheeltec_robot_slam/wheeltec_slam_toolbox/package.xml",
+      "sha256": "1f2c0fb7e350eed9d921600d479fafb867a31d0d20bd3d8e0d85b11438d0c77a"
+    },
+    {
+      "path": "wheeltec_slam_toolbox/src/publisher_member_function.cpp",
+      "source": "wheeltec_robot_slam/wheeltec_slam_toolbox/src/publisher_member_function.cpp",
+      "sha256": "8eb88e31be262d1cc3863a7885a214a6684a9813626d2383944118924bb99828"
+    }
+  ]
+}

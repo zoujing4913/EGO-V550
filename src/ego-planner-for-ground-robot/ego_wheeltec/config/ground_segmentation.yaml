@@ -1,0 +1,52 @@
+# Launch requires the actual 3D lidar_frame and measured sensor_height.
+ground_segmentation:
+  ros__parameters:
+    use_sim_time: false
+    sensor_frame: ''
+    output_frame: ''
+    allow_latest_tf: false
+    sensor_height: -1.0
+    patchwork:
+      verbose: false
+      visualize: true
+      num_iter: 3
+      num_lpr: 20
+      num_min_pts: 5
+      th_seeds: 0.2
+      th_dist: 0.1
+      max_r: 15.0
+      min_r: 0.5
+      uprightness_thr: 0.707
+      adaptive_seed_selection_margin: -1.1
+      using_global_elevation: false
+      global_elevation_threshold: -0.5
+      uniform:
+        num_rings: 16
+        num_sectors: 54
+      czm:
+        num_zones: 4
+        num_sectors_each_zone:
+        - 16
+        - 32
+        - 54
+        - 32
+        num_rings_each_zone:
+        - 2
+        - 4
+        - 4
+        - 4
+        min_ranges_each_zone:
+        - 0.5
+        - 4.0
+        - 8.0
+        - 12.0
+        elevation_thresholds:
+        - 0.15
+        - 0.2
+        - 0.25
+        - 0.3
+        flatness_thresholds:
+        - 0.0
+        - 0.000125
+        - 0.000185
+        - 0.000185

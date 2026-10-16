@@ -1,0 +1,13 @@
+.vscode/settings.json
+.catkin_workspace
+build/
+devel/
+install/
+log/
+__pycache__/
+*.py[cod]
+files/
+src/CMakeLists.txt
+benchmark_haha.zip
+rebound_planner_BB.zip
+

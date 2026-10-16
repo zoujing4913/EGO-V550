@@ -1,0 +1,80 @@
+# Initial indoor commissioning values. Measure footprint and tune inflation before driving.
+ego_planner_node:
+  ros__parameters:
+    use_sim_time: false
+    fsm:
+      flight_type: 1
+      thresh_replan: 0.3
+      thresh_no_replan: 0.4
+      planning_horizon: 2.0
+      planning_horizen_time: 3.0
+      emergency_time_: 1.0
+      w_adjust_: 0.3
+      waypoint_num: 0
+    grid_map:
+      resolution: 0.1
+      map_size_x: 40.0
+      map_size_y: 40.0
+      map_size_z: 4.0
+      local_update_range_x: 5.0
+      local_update_range_y: 5.0
+      local_update_range_z: 3.5
+      obstacles_inflation: 0.3
+      local_map_margin: 2
+      ground_height: -0.2
+      cx: 321.04638671875
+      cy: 243.44969177246094
+      fx: 387.229248046875
+      fy: 387.229248046875
+      use_depth_filter: true
+      depth_filter_tolerance: 0.15
+      depth_filter_maxdist: 5.0
+      depth_filter_mindist: 0.2
+      depth_filter_margin: 1
+      k_depth_scaling_factor: 1000.0
+      skip_pixel: 2
+      p_hit: 0.65
+      p_miss: 0.35
+      p_min: 0.12
+      p_max: 0.9
+      p_occ: 0.8
+      min_ray_length: 0.2
+      max_ray_length: 6.0
+      virtual_ceil_height: 1.6
+      visualization_truncate_height: 1.5
+      show_occ_time: false
+      pose_type: 2
+      map_type: 1
+      frame_id: odom_combined
+      projection_max_height: 3.0
+    manager:
+      max_vel: 0.15
+      max_acc: 0.3
+      max_jerk: 3.0
+      control_points_distance: 0.3
+      feasibility_tolerance: 0.05
+      planning_horizon: 2.0
+    optimization:
+      lambda_smooth: 1.0
+      lambda_collision: 0.8
+      lambda_feasibility: 0.1
+      lambda_fitness: 1.0
+      dist0: 0.5
+      max_vel: 0.15
+      max_acc: 0.3
+      order: 3
+    bspline:
+      limit_vel: 0.15
+      limit_acc: 0.3
+      limit_ratio: 1.1
+    odom_twist_in_body_frame: true
+traj_server:
+  ros__parameters:
+    use_sim_time: false
+    MPC:
+      v_max: 0.15
+      w_max: 0.4
+      omega0: 1.0
+      omega1: 0.5
+    pose_topic: ''
+    odom_twist_in_body_frame: true

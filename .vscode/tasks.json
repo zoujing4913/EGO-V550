@@ -1,0 +1,37 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "V550：编译实车工程及厂家驱动",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "${workspaceFolder}/src/ego-planner-for-ground-robot/tools/v550/build_workspace.sh",
+        "real"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "build",
+      "problemMatcher": [
+        "$gcc"
+      ]
+    },
+    {
+      "label": "V550：编译仿真及全部依赖",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "${workspaceFolder}/src/ego-planner-for-ground-robot/tools/v550/build_workspace.sh",
+        "sim"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "build",
+      "problemMatcher": [
+        "$gcc"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+gazebo:
+  ros__parameters:
+    # Sensor samples can be up to 0.1 s ahead of a 10 Hz /clock. A 100 Hz clock
+    # keeps scan freshness checks and the 30 ms MPC timer in step with physics.
+    publish_rate: 100.0

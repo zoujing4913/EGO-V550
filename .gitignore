@@ -1,0 +1,17 @@
+# ROS / colcon build products
+build/
+install/
+log/
+devel/
+# Local caches and credentials
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.idea/
+.aws/
+.codex/
+.agents/
+.env
+.env.*
+# Generated deployment archives
+dist/

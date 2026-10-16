@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<!--
+  CMU indoor corridor scene (the "indoor" environment that already ships with this
+  repository) as a ROS 2 / Gazebo classic world.
+
+  Differences to the original ROS 1 file
+  (.../vehicle_simulator/world/indoor.world):
+    * the ROS 1 plugin librotors_gazebo_ros_interface_plugin.so is removed - ROS 2
+      uses libgazebo_ros_init.so / libgazebo_ros_factory.so (started by the launch
+      file) for /clock and /spawn_entity;
+    * the mesh model is shifted so that the scene is centred on the origin.
+
+  Why the shift: the planner's occupancy buffer is centred on the origin
+  (map_origin = -map_size/2), and the mesh spans x[-1.9, 127.5], y[-29.2, 70.0].
+  With the shift (-62.8, -20.4, 0) the scene spans x[-64.7, 64.7], y[-49.6, 49.6],
+  which fits into the 140 x 110 x 2.5 m map of config/ego_planner_indoor.yaml.
+  The original CMU coordinate (0, 0) therefore corresponds to (-62.8, -20.4) here.
+  The default spawn point is in the demo screenshot's passage at (-31.3, -23.4).
+
+  The mesh itself comes from
+    autonomous_exploration_development_environment/src/vehicle_simulator/mesh/indoor
+  and is installed into share/ego_ground_sim/models by CMakeLists.txt, so
+  'model://indoor' resolves without sourcing anything.
+-->
+<sdf version="1.6">
+  <world name="cmu_indoor_world">
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <include>
+      <uri>model://indoor</uri>
+      <pose>-62.8 -20.4 0 0 0 0</pose>
+    </include>
+
+    <!-- Top view of the default spawn, matching the demo's map orientation. -->
+    <gui>
+      <camera name="user_camera">
+        <pose>-31.3 -23.4 22 0 1.57079632679 0</pose>
+        <view_controller>orbit</view_controller>
+      </camera>
+    </gui>
+
+    <physics type="ode">
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>1000</iters>
+          <sor>1.3</sor>
+        </solver>
+        <constraints>
+          <cfm>0</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>100</contact_max_correcting_vel>
+          <contact_surface_layer>0.001</contact_surface_layer>
+        </constraints>
+      </ode>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+      <gravity>0 0 -9.8</gravity>
+    </physics>
+
+  </world>
+</sdf>

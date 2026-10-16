@@ -1,0 +1,41 @@
+# ROS 2 (Humble) parameter file for the patchwork ground segmentation node.
+# It is the ROS 2 counterpart of config/params_ouster128.yaml (the values are
+# identical, only the naming scheme changed from `/a/b` to `a.b`).
+ground_segmentation:
+  ros__parameters:
+    # patchwork segments in the sensor frame (its concentric zone model is centred
+    # on the origin of the cloud) and publishes the result in `output_frame`.
+    # Leave both empty to segment/publish in the frame of the incoming cloud.
+    sensor_frame: ""
+    output_frame: ""
+
+    # height of the sensor above the ground (0.0 -> sensor frame is already
+    # parallel to the ground plane, as for the ground robot)
+    sensor_height: 0.0
+
+    patchwork:
+      verbose: false          # print uprightness/elevation/flatness details
+      visualize: true         # publish /gpf/plane (MarkerArray)
+      num_iter: 3
+      num_lpr: 20
+      num_min_pts: 10
+      th_seeds: 0.3
+      th_dist: 0.125
+      max_r: 200.0
+      min_r: 2.7              # vicinity of the robot body
+      uprightness_thr: 0.707  # 45 deg
+      adaptive_seed_selection_margin: -1.1
+      using_global_elevation: false
+      global_elevation_threshold: -0.5
+
+      uniform:                # deprecated in patchwork, kept for compatibility
+        num_rings: 16
+        num_sectors: 54
+
+      czm:
+        num_zones: 4
+        num_sectors_each_zone: [16, 32, 54, 32]
+        num_rings_each_zone: [2, 4, 4, 4]
+        min_ranges_each_zone: [2.7, 12.3625, 22.025, 41.35]
+        elevation_thresholds: [0.5, 0.8, 1.0, 1.1]
+        flatness_thresholds: [0.0, 0.000125, 0.000185, 0.000185]

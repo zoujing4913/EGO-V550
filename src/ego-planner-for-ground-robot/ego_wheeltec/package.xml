@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>ego_wheeltec</name>
+  <version>0.1.0</version>
+  <description>Real robot interfaces and commissioning tools for the V550 ground EGO planner.</description>
+  <maintainer email="340999494+zoujing4913@users.noreply.github.com">zoujing4913</maintainer>
+  <license>TODO</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclcpp</depend>
+  <depend>nav_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>std_srvs</depend>
+  <depend>tf2</depend>
+  <depend>tf2_ros</depend>
+  <depend>tf2_geometry_msgs</depend>
+  <depend>bspline_opt</depend>
+  <depend>ego_planner</depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>patchwork</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>python3-yaml</exec_depend>
+  <exec_depend>rviz2</exec_depend>
+  <exec_depend>turn_on_wheeltec_robot</exec_depend>
+  <exec_depend>wheeltec_robot_urdf</exec_depend>
+  <exec_depend>lslidar_driver</exec_depend>
+  <exec_depend>wheeltec_slam_toolbox</exec_depend>
+  <exec_depend>slam_toolbox</exec_depend>
+  <exec_depend>python3-numpy</exec_depend>
+  <exec_depend>python3-scipy</exec_depend>
+  <test_depend>python3-pytest</test_depend>
+  <test_depend>sensor_msgs_py</test_depend>
+  <test_depend>visualization_msgs</test_depend>
+  <export><build_type>ament_cmake</build_type></export>
+</package>

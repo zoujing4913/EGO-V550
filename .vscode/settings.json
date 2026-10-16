@@ -1,0 +1,3 @@
+{
+    "cmake.sourceDirectory": "${workspaceFolder}/src/ego-planner-for-ground-robot/ego_ground_sim"
+}
